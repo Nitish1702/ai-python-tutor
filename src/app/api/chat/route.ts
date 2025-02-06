@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     
 
     // Initialize GoogleGenerativeAI with the user's API key
-    const genAI = new GoogleGenerativeAI(apiKey?apiKey:process.env.NEXT_PUBLIC_GEMINI_API_KEY);
+    const genAI = new GoogleGenerativeAI(apiKey?apiKey:process.env.NEXT_PUBLIC_GEMINI_API);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     // Generate the response using the provided prompt
